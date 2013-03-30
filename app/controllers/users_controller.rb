@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout "admin"
+
   def new
     @user = User.new
   end
@@ -14,5 +16,9 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def sign_in
+    @user = User.new
   end
 end

@@ -3,6 +3,7 @@ BriefWcm::Application.routes.draw do
   resources :home
 
   match '/signup',  to: 'users#new'
+  match '/signin',  to: 'users#sign_in'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
