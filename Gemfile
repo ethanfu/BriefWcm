@@ -7,8 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 gem 'bootstrap-sass', '2.1'
-#密码加密使用
-gem 'bcrypt-ruby', '3.0.1'
 
 gem 'json'
 
@@ -26,8 +24,8 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+#To use ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -44,8 +42,10 @@ group :development do
   gem 'annotate', '2.5.0'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
+  gem 'capybara'
 end
 group :test do
   #As with RSpec, Factory Girl defines a domain-specific language in Ruby, in this case specialized for defining Active Record objects. The syntax is simple, relying on Ruby blocks and custom methods to define the attributes of the desired object.
   gem 'factory_girl_rails', '4.1.0'
+  gem 'capybara'
 end
