@@ -45,3 +45,7 @@ group :development do
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
 end
+group :test do
+  #As with RSpec, Factory Girl defines a domain-specific language in Ruby, in this case specialized for defining Active Record objects. The syntax is simple, relying on Ruby blocks and custom methods to define the attributes of the desired object.
+  gem 'factory_girl_rails', '4.1.0'
+end
