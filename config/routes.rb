@@ -1,9 +1,6 @@
 BriefWcm::Application.routes.draw do
-  get "home/home"
-
-  get "home/new"
-
-  get "users/new"
+  resources :users
+  resources :home
 
   match '/signup',  to: 'users#new'
 
