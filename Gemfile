@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 gem 'bootstrap-sass', '2.1'
+#密码加密使用
+gem 'bcrypt-ruby', '3.0.1'
 
 gem 'json'
 
@@ -38,3 +40,8 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug'
+group :development do
+  gem 'annotate', '2.5.0'
+  gem 'rspec-rails', '2.11.0'
+  gem 'guard-rspec', '1.2.1'
+end
