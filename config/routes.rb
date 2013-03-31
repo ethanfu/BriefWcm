@@ -4,6 +4,7 @@ BriefWcm::Application.routes.draw do
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'users#sign_in'
+  match '/doLogin',  to: 'users#authenticateUser'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
