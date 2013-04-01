@@ -8,13 +8,13 @@
 以注册用户来说明，首先执行生成controller的代码：
 
 	rails generate controller Users new --no-test-framework
-然后生成模型，顺便生成相应的sql等
+## 然后生成模型，顺便生成相应的sql等
 
-由于email是唯一，可以把email设置为主键：
+## 由于email是唯一，可以把email设置为主键：
 
 	rails generate migration add_index_to_users_email
 	bundle exec rake db:migrate
 	
-对密码加密
+## 对密码加密
 
 	rails generate migration add_password_digest_to_users password_digest:string
