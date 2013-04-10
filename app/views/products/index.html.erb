@@ -1,0 +1,32 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Productid</th>
+    <th>Name</th>
+    <th>Parentid</th>
+    <th>Picpath</th>
+    <th>Productdesc</th>
+    <th>Deletetag</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.parentId %></td>
+    <td><%= product.picPath %></td>
+    <td><%= product.productDesc %></td>
+    <td><%= product.deleteTag %></td>
+    <td><%= link_to '查看', product %></td>
+    <td><%= link_to '编辑', edit_product_path(product) %></td>
+    <td><%= link_to '删除', product, method: :delete, data: { confirm: '确定删除吗?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新增', new_product_path %>

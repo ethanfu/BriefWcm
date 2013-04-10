@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="span6 offset3">
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+    <%= f.label :parentId %><br />
+    <%= f.number_field :parentId %>
+    <%= f.label :picPath %><br />
+    <%= f.text_field :picPath %>
+    <%= f.label :productDesc %><br />
+    <%= f.text_area :productDesc %>
+    <%= f.label :deleteTag %><br />
+    <%= f.number_field :deleteTag %>
+    <%= f.submit "保存", class: "btn btn-large btn-primary" %>
+<% end %>
+  </div>
+</div>
