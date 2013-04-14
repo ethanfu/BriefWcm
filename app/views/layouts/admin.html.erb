@@ -1,16 +1,23 @@
+<!-- 后台页面公用布局 -->
 <!DOCTYPE html>
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
+  <!-- 后台页面公用样式 -->
+  <%= render 'layouts/admin_css' %>
+  <!-- 引入各自页面的js -->
+  <%= javascript_include_tag params[:controller] %>
+   <!-- 引入各自页面的css -->
+  <%= stylesheet_link_tag params[:controller] %>
+  <!-- 防止 csrf 攻击 -->
   <%= csrf_meta_tags %>
+  <!-- 帮助 Internet Explorer 识别和呈现 HTML5 元素 -->
   <%= render 'layouts/shim' %>
 </head>
 <body>
-<div class="container">
   <%= yield %>
   <%= debug(params) if Rails.env.development? %>
-</div>
+  <!-- 后台页面公用js -->
+  <%= render 'layouts/admin_js' %>
 </body>
 </html>

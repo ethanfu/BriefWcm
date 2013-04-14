@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  #指定布局
+  layout "admin" 
+  
   # GET /products
   # GET /products.json
   def index
