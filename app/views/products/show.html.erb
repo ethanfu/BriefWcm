@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <b>Name:</b>
+  <%= @product.name %>
+</p>
+
+<p>
+  <b>Parentid:</b>
+  <%= @product.parentId %>
+</p>
+
+<p>
+  <b>Picpath:</b>
+  <%= @product.picPath %>
+</p>
+
+<p>
+  <b>Productdesc:</b>
+  <%= @product.productDesc %>
+</p>
+
+<p>
+  <b>Deletetag:</b>
+  <%= @product.deleteTag %>
+</p>
+
+
+<%= link_to '编辑', edit_product_path(@product) %> |
+<%= link_to '返回', products_path %>

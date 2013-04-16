@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   def authenticateUser
     user = User.find_by_email(params[:users][:email].downcase)
     if user && user.authenticate(params[:users][:password])
-      redirect_to root_path
+      redirect_to admin_path
     else
       flash[:error] = 'Invalid email/password'
       render "sign_in"
