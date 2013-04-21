@@ -1,4 +1,8 @@
 BriefWcm::Application.routes.draw do
+  get "about/index"
+
+  get "contactus/index"
+
   get "admin/index"
 
   resources :products
@@ -11,6 +15,8 @@ BriefWcm::Application.routes.draw do
   match '/signin',  to: 'users#sign_in'
   match '/doLogin',  to: 'users#authenticateUser'
   match '/admin',  to: 'admin#index'
+  match '/contactus',  to: 'contactus#index'
+  match '/about',  to: 'about#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
