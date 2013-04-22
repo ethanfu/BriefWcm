@@ -258,7 +258,7 @@
         dm3_nav_select();
         
         // Homepage slideshow
-        $('.homepage .r-slider').dm3ResponsiveSlider({
+        $('.js_banner .r-slider').dm3ResponsiveSlider({
             afterSlideCb: function() {
                 var slide = this.slides.eq(this.curSlideNum-1),
                     desc = slide.find('.description:first').html(),

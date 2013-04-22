@@ -17,6 +17,10 @@ BriefWcm::Application.routes.draw do
   match '/admin',  to: 'admin#index'
   match '/contactus',  to: 'contactus#index'
   match '/about',  to: 'about#index'
+  match '/service',  to: 'about#service'
+  match '/product',  to: 'home#product'
+  match '/device',  to: 'home#device'
+  match '/lab',  to: 'home#lab'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
