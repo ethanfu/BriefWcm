@@ -3,8 +3,8 @@
         <!-- Gallery section -->
         <div class="container container-single boxed clearfix">
             <div class="grid-12" id="page-title">
-                <h1>Contact us</h1>
-                <p>Consectetur Adipisicing!</p>
+                <h1>联系我们</h1>
+                <p>期待您的咨询</p>
                 <div class="clear"></div>
             </div>
             
@@ -17,11 +17,11 @@
                 
                 <form class="form" />
                     <div class="form-element">
-                        <label>First Name <span class="required">*</span></label>
+                        <label>姓名 <span class="required">*</span></label>
                         
                         <div class="form-field">
                             <div class="form-field-wrap">
-                                <input type="text" name="firstname" />
+                                <input type="text" name="username" />
                             </div>
                         </div>
                         
@@ -29,11 +29,11 @@
                     </div>
                     
                     <div class="form-element">
-                        <label>Last Name <span class="required">*</span></label>
+                        <label>电话 <span class="required">*</span></label>
                         
                         <div class="form-field">
                             <div class="form-field-wrap">
-                                <input type="text" name="lastname" />
+                                <input type="text" name="phone" />
                             </div>
                         </div>
                         
@@ -41,7 +41,7 @@
                     </div>
                     
                     <div class="form-element">
-                        <label>Email <span class="required">*</span></label>
+                        <label>邮箱 <span class="required">*</span></label>
                         
                         <div class="form-field">
                             <div class="form-field-wrap">
@@ -51,31 +51,12 @@
                         
                         <div class="clear"></div>
                     </div>
-                    
                     <div class="form-element">
-                        <label>Question Type</label>
-                        
-                        <div class="form-field">
-                            <div class="form-field-wrap">
-                                <select name="question-type">
-                                    <option value="0" />Option 1
-                                    <option value="1" />Option 2
-                                    <option value="2" />Option 3
-                                    <option value="3" />Option 4
-                                    <option value="4" />Option 5
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="clear"></div>
-                    </div>
-                    
-                    <div class="form-element">
-                        <label>Message</label>
+                        <label>内容</label>
                         
                         <div class="form-field">
                             <div class="form-field-wrap form-textarea-wrap">
-                                <textarea name="message" rows="10"></textarea>
+                                <textarea name="content" rows="10"></textarea>
                             </div>
                         </div>
                         
@@ -83,8 +64,8 @@
                     </div>
                     
                     <div class="form-options">
-                        <button class="btn btn-primary btn-icon" type="submit">Submit <span><i>&raquo;</i></span></button>
-                        <button class="btn" type="reset">Reset</button>
+                        <button class="btn btn-primary btn-icon" type="submit">提交 <span><i>&raquo;</i></span></button>
+                        <button class="btn" type="reset">重置</button>
                     </div>
                 </form>
             </div>
@@ -95,25 +76,27 @@
                 <div class="sidebar-inner">
                     <!-- Text widget -->
                     <div class="widget first">
-                        <h4 class="widget-title site-title">How to Find Us</h4><div class="underline"></div>
+                        <h4 class="widget-title site-title">怎么找到我们</h4><div class="underline"></div>
                         
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            	青岛即发颐和有限公司
                         </p>
                         
                         <address>
-                            <strong>dm3theme 2</strong><br />
-                            Box 564, Disneyland<br />
-                            Email: <a href="mailto:us@example.org">us@example.org</a><br />
-                            Phone: +12 34 56 78
+                            <strong>联系方式</strong><br />
+                            	电话：+86 532 87569666 
+     								 +86 532 87569888<br />
+                            	传真：+86 532 87569889<br />
+                            	邮箱: <a href="mailto:us@example.org">jifa@chinajifa.com</a><br />
+                            	地址：中国山东省即墨市黄河二路
                         </address>
                         
-                        <div id="google_map" data-latitude="50.45" data-longitude="30.52" data-title="My Title" style="width: 280px; height: 280px;"></div>
+                        <div id="google_map" data-longitude="120.42616300284863" data-latitude="36.40528508039787" data-title="青岛即发颐和有限公司" style="width: 280px; height: 280px;"></div>
                     </div>
                     
                     <!-- Menu widget -->
                     <div class="widget">
-                        <h4 class="widget-title site-title">Our Partners</h4><div class="underline"></div>
+                        <h4 class="widget-title site-title">合作伙伴</h4><div class="underline"></div>
                         
                         <ul class="nav-v">
                             <li><a href="#">Lorem Ipsum</a></li>
@@ -130,3 +113,32 @@
         <div class="section-shadow"></div>
         <div class="section-border"></div>
     </div> <!-- .section -->
+<script type="text/javascript" src="/assets/front/jquery.min.js"></script>    
+<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?sensor=false"></script>
+<script>
+	var google_map_div = $("#google_map");
+	
+	var lat = google_map_div.data('latitude');
+	var lon = google_map_div.data('longitude');
+	var title = google_map_div.data('title');
+	
+	var latlng = new google.maps.LatLng(lat, lon);
+	var myOptions = {
+	    zoom: 12,
+	    center: latlng,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("google_map"), myOptions);
+	var companyPos = new google.maps.LatLng(lat, lon);
+	var markerImage = new google.maps.MarkerImage('http://www.google.cn/mapfiles/marker.png',
+	    new google.maps.Size(132,41),
+	    new google.maps.Point(0,0),
+	    new google.maps.Point(50,50)
+	);
+	var companyMarker = new google.maps.Marker({
+	    position: companyPos,
+	    map: map,
+	    icon: markerImage,
+	    title: title
+	});
+</script>
