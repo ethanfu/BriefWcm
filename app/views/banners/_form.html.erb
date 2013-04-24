@@ -1,0 +1,33 @@
+<%= form_for(@banner) do |f| %>
+  <% if @banner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@banner.errors.count, "error") %> prohibited this banner from being saved:</h2>
+
+      <ul>
+      <% @banner.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :bDesc %><br />
+    <%= f.text_field :bDesc %>
+  </div>
+  <div class="field">
+    <%= f.label :linkUrl %><br />
+    <%= f.text_field :linkUrl %>
+  </div>
+  <div class="field">
+    <%= f.label :picUrl %><br />
+    <%= f.text_field :picUrl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

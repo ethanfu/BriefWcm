@@ -1,4 +1,7 @@
 BriefWcm::Application.routes.draw do
+  resources :banners
+
+
   get "about/index"
 
   get "contactus/index"
@@ -21,6 +24,7 @@ BriefWcm::Application.routes.draw do
   match '/product',  to: 'home#product'
   match '/device',  to: 'home#device'
   match '/lab',  to: 'home#lab'
+  match '/banner',  to: 'banners#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
