@@ -115,8 +115,36 @@ function docReady(){
 
 
 	//uniform - styler for checkbox, radio and file input
-	$("input:checkbox, input:radio, input:file").not('[data-no-uniform="true"],#uniform-is-ajax').uniform();
-
+	$("input:checkbox, input:radio, input:file").not('[data-no-uniform="true"],#uniform-is-ajax').uniform({
+		 fileDefaultText: "没有选择文件",
+         fileBtnText: "选择文件"
+	
+	});
+	/**
+	a.uniform = {
+        options: {
+            selectClass: "selector",
+            radioClass: "radio",
+            checkboxClass: "checker",
+            fileClass: "uploader",
+            filenameClass: "filename",
+            fileBtnClass: "action",
+            fileDefaultText: "No file selected",
+            fileBtnText: "Choose File",
+            checkedClass: "checked",
+            focusClass: "focus",
+            disabledClass: "disabled",
+            buttonClass: "button",
+            activeClass: "active",
+            hoverClass: "hover",
+            useID: true,
+            idPrefix: "uniform",
+            resetSelector: false,
+            autoHide: true
+        },
+        elements: []
+    };
+*/
 	//chosen - improves select
 	$('[data-rel="chosen"],[rel="chosen"]').chosen();
 
