@@ -7,19 +7,22 @@
 
 <p>
   <b>Bdesc:</b>
-  <%= @banner.bDesc %>
+  <%= @banner.bdesc %>
 </p>
 
 <p>
   <b>Linkurl:</b>
-  <%= @banner.linkUrl %>
+  <%= @banner.link_url %>
 </p>
 
 <p>
   <b>Picurl:</b>
-  <%= @banner.picUrl %>
+  <%= @banner.pic_url %>
 </p>
 
+<%= image_tag @banner.pic_url.url %>
+<%= image_tag @banner.pic_url.url(:medium) %>
+<%= image_tag @banner.pic_url.url(:thumb) %>
 
 <%= link_to 'Edit', edit_banner_path(@banner) %> |
 <%= link_to 'Back', banners_path %>

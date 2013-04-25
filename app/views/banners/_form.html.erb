@@ -1,4 +1,4 @@
-<%= form_for(@banner) do |f| %>
+<%= form_for @banner, :html => { :multipart => true } do |f| %>
   <% if @banner.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@banner.errors.count, "error") %> prohibited this banner from being saved:</h2>
@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :bDesc %><br />
-    <%= f.text_field :bDesc %>
+    <%= f.text_field :bdesc %>
   </div>
   <div class="field">
     <%= f.label :linkUrl %><br />
-    <%= f.text_field :linkUrl %>
+    <%= f.text_field :link_url %>
   </div>
   <div class="field">
-    <%= f.label :picUrl %><br />
-    <%= f.text_field :picUrl %>
+    <%= f.label :pic_url %><br />
+    <%= f.file_field :pic_url %>
   </div>
   <div class="actions">
     <%= f.submit %>

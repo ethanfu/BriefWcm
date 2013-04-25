@@ -34,4 +34,7 @@ BriefWcm::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  #ImageMagick安装路径
+  Paperclip.options[:command_path] = "C:\ImageMagick-6.8.5-Q16"
+  #Paperclip.options[:image_magick_path] = "C:\\ImageMagick-6.8.5-Q16"
 end

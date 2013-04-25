@@ -46,8 +46,8 @@
 							<% @banners.each do |banner| %>
 							<tr>
 								<td class="center"><%= banner.title %></td>
-								<td class="center"><%= banner.bDesc %></td>
-								<td class="center"><%= banner.linkUrl %></td>
+								<td class="center"><%= banner.bdesc %></td>
+								<td class="center"><%= banner.link_url %></td>
 								<td class="center">
 									<%= banner.created_at %>
 								</td>
@@ -80,7 +80,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="box-content">
-					<form class="form-horizontal">
+					<form class="form-horizontal" action="/newBanner">
 						<fieldset>
 						  <div class="control-group">
 							<label class="control-label" for="title">标题</label>
