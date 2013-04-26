@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @banner.title %>
+</p>
+
+<p>
+  <b>Bdesc:</b>
+  <%= @banner.bdesc %>
+</p>
+
+<p>
+  <b>Linkurl:</b>
+  <%= @banner.link_url %>
+</p>
+
+<p>
+  <b>Picurl:</b>
+  <%= @banner.pic_url %>
+</p>
+
+<%= image_tag @banner.pic_url.url %>
+<%= image_tag @banner.pic_url.url(:medium) %>
+<%= image_tag @banner.pic_url.url(:thumb) %>
+
+<%= link_to 'Edit', edit_banner_path(@banner) %> |
+<%= link_to 'Back', banners_path %>

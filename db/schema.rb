@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410063805) do
+ActiveRecord::Schema.define(:version => 20130425143821) do
+
+  create_table "banners", :force => true do |t|
+    t.string   "title"
+    t.string   "bdesc"
+    t.string   "link_url"
+    t.string   "pic_url"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "pic_url_file_name"
+    t.string   "pic_url_content_type"
+    t.integer  "pic_url_file_size"
+    t.datetime "pic_url_updated_at"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "name"

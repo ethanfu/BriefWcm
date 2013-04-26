@@ -1,4 +1,7 @@
 BriefWcm::Application.routes.draw do
+  resources :banners
+
+
   get "about/index"
 
   get "contactus/index"
