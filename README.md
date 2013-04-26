@@ -42,6 +42,18 @@
 	注意字段名不能大写，只能是小写字母，下划线，数字组成
 	6.运行rake db:migrate 更新数据库字段信息
 	7.页面中的使用很简单，可以参考banner里的
+	8.自定义上传文件名
+	方法一：
+		修改paperclip源码
+		找到paperclip插件安装文件
+		C:\RailsInstaller\Ruby1.9.3\lib\ruby\gems\1.9.1\gems\paperclip-3.4.1\lib\paperclip\attachment.rb
+		搜索instance_write(:file_name,       cleanup_filename(file.original_filename))
+		替换为：
+		 extension = File.extname(file.original_filename).downcase
+		 instance_write(:file_name,        "#{Time.now.strftime("%Y%m%d%H%M%S")}#{rand(1000)}#{extension}")
 	
+	方法二：http://yangzhihuan.iteye.com/blog/704331
+	目前我采用方法一，但是还是不能上传中文文件名，不知道是不是windows的原因
+
 
 
